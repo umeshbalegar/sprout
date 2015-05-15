@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Sprout injection</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+        <script type="text/javascript" src="./js/loadDependencies.js">//</script>
+        <script type="text/javascript" src="./js/sprout_core.js">//</script>
+        <script type="text/javascript" src="./js/sproutConfigFactory.js">//</script>
+        <script type="text/javascript" src="./js/LoadModuleAndDependency.js">//</script>
+
+        <script>
+            function runthis(){
+                sproutConfigFactory.setConfigLocation({"parent_folder":"sprout_config/"});
+                sproutConfigFactory.loadModules("jqScrollview-plugin",null);
+            }
+
+			function taoPluginCallback(){
+				console.log("called the callback ");		
+			}
+		$("document").ready(function(){
+			 runthis();
+		});
+           
+            
+        </script>
+    </head>
+    <body>
+		<div ng-app='anApp'>
+		    <div ng-controller='aCtrl'>
+		        <tao-plugin plugin='{{plugin}}'></tao-plugin>
+		    </div>
+		</div>
+		
+		<div id="progress_insert"></div>
+		<!-- Jquery Scroll View widget -->
+		
+		    <div id="photoGallery">
+		        <div><div class="photo" style="background-image: url(http://localhost:8080/sprout/modules/jqScrollview-plugin/images/imageNature1.jpg)"></div></div>
+		        <div><div class="photo" style="background-image: url(http://localhost:8080/sprout/modules/jqScrollview-plugin/images/imageNature2.jpg)"></div></div>
+		        <div><div class="photo" style="background-image: url(http://localhost:8080/sprout/modules/jqScrollview-plugin/images/imageNature3.jpg)"></div></div>
+		        <div><div class="photo" style="background-image: url(http://localhost:8080/sprout/modules/jqScrollview-plugin/images/imageNature4.jpg)"></div></div>
+		        <div><div class="photo" style="background-image: url(http://localhost:8080/sprout/modules/jqScrollview-plugin/images/imageNature5.jpg)"></div></div>
+		    </div>
+		    <div style='margin-top: 20px;'>
+		        <br />
+		        <div>
+		            <input type="button" value="Start Slideshow" id="StartBtn" />
+		            <input type="button" value="Stop Slideshow" id="StopBtn" />
+		        </div>
+		    </div>		
+    </body>
+</html>

@@ -1,0 +1,26 @@
+{
+    "name" : "tao-plugin",
+    "version" : "1.0",
+
+    "customJS" : {
+            "custom_inline":null,            
+            "custom_sorce":[
+            					"modules/tao-plugin/js/tao-plugin.js"
+            				]
+
+    },
+    "html" : "&lt;div ng-app='anApp'&gt;&lt;div ng-controller='aCtrl'&gt;&lt;tao-plugin plugin='{{plugin}}'&gt;&lt;/tao-plugin&gt;&lt;/div&gt;&lt;/div&gt;",
+
+    "css"  : "",
+    "coreJS" :{
+        "core_source" :  [
+                            "http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.js"
+                         ],
+        "core_inline" : null
+
+
+    }
+    
+    
+}
+    

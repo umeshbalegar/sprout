@@ -1,0 +1,38 @@
+{
+    "name" : "progressbar-plugin",
+    "version" : "1.0",
+
+    "customJS" : {
+            "custom_inline":null,            
+            "custom_source":[
+            					"modules/jqScrollview-plugin/js/jqxcore.js",
+            					"modules/jqScrollview-plugin/js/demos.js",            					
+            					"modules/jqScrollview-plugin/js/jqxbuttons.js",            					
+            					"modules/jqScrollview-plugin/js/jqxscrollview.js"
+            				]
+
+    },
+    "html" : "",
+
+    "css"  : {
+    	"css_source" : [
+    						"modules/jqScrollview-plugin/css/jqx.arctic.css",
+    						"modules/jqScrollview-plugin/css/jqx.base.css"
+    					],
+    	"css_inline" : null
+    					
+    		
+    		},
+    "coreJS" :{
+        "core_source" :  [
+        					"http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js",
+                            "http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.js"
+                         ],
+        "core_inline" : null
+
+
+    },
+    
+    "callback":"$(function () {     console.log('called the callback');       $('#photoGallery').jqxScrollView({ width: 600, height: 450, buttonsOffset: [0, 0]});            $('#StartBtn').jqxButton({ theme: 'Arctic' });            $('#StopBtn').jqxButton({ theme: 'Arctic' });            $('#StartBtn').click(function () {                $('#photoGallery').jqxScrollView({ slideShow: true });     });            $('#StopBtn').click(function () {                $('#photoGallery').jqxScrollView({ slideShow: false });          });        });"
+}
+    
